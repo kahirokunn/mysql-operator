@@ -22,7 +22,7 @@ The following table contains the configuration parameters for mysql-operator and
 | `image`                         | Controller container image                                                                    | `docker.io/bitpoke/mysql-operator:latest`               |
 | `imagePullPolicy`               | Controller image pull policy                                                                  | `IfNotPresent`                                          |
 | `imagePullSecrets`              | Controller image pull secret                                                                  |                                                         |
-| `sidecarImage`                  | Mysql operator sidecar image                                                                  | `docker.io/bitpoke/mysql-operator-sidecar-5.7:latest`   |
+| `sidecarImage`                  | Mysql operator sidecar image                                                                  | `docker.io/kahiro/mysql-operator:0.5.2.test`   |
 | `sidecarMysql8Image`            | Mysql operator sidecar image                                                                  | `docker.io/bitpoke/mysql-operator-sidecar-8.0:latest`   |
 | `installCRDs`                   | Whether or not to install CRDS, Regardless of value of this, Helm v3+ will install the CRDs if those are not present already. Use `--skip-crds` with `helm install` if you want to skip CRD creation                                                                | `true`                                    |
 | `resources`                     | Controller and Orchestrator pod resources limits and requests                                 | `{}`                                                    |

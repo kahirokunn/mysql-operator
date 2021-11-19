@@ -23,7 +23,7 @@ annotations:
     - name: orchestrator
       image: docker.io/bitpoke/mysql-operator-orchestrator:latest
     - name: mysql-5.7-sidecar
-      image: docker.io/bitpoke/mysql-operator-sidecar-5.7:latest
+      image: docker.io/kahiro/mysql-operator:0.5.2.test
     - name: mysql-8.0-sidecar
       image: docker.io/bitpoke/mysql-operator-sidecar-8.0:latest
 

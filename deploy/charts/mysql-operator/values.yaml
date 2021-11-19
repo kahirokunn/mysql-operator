@@ -4,7 +4,7 @@
 
 replicas: 1
 image: docker.io/bitpoke/mysql-operator:latest
-sidecarImage: docker.io/bitpoke/mysql-operator-sidecar-5.7:latest
+sidecarImage: docker.io/kahiro/mysql-operator:0.5.2.test
 sidecarMysql8Image: docker.io/bitpoke/mysql-operator-sidecar-8.0:latest
 imagePullPolicy: IfNotPresent
 
