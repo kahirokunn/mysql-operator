@@ -18,13 +18,10 @@ impersonate = ${GDRIVE_IMPERSONATOR}
 type = s3
 env_auth = true
 provider = ${S3_PROVIDER:-"AWS"}
-access_key_id = ${AWS_ACCESS_KEY_ID}
-secret_access_key = ${AWS_SECRET_ACCESS_KEY:-$AWS_SECRET_KEY}
 region = ${AWS_REGION:-"us-east-1"}
 endpoint = ${S3_ENDPOINT}
 acl = ${AWS_ACL}
 storage_class = ${AWS_STORAGE_CLASS}
-session_token = ${AWS_SESSION_TOKEN}
 
 [gs]
 type = google cloud storage
@@ -45,12 +42,12 @@ account = ${AZUREBLOB_ACCOUNT}
 key = ${AZUREBLOB_KEY}
 EOF
 
-if [[ -n "${GCS_SERVICE_ACCOUNT_JSON_KEY:-}" ]]; then 
+if [[ -n "${GCS_SERVICE_ACCOUNT_JSON_KEY:-}" ]]; then
     echo "Create google-credentials.json file."
     cat <<EOF > /tmp/google-credentials.json
     ${GCS_SERVICE_ACCOUNT_JSON_KEY}
 EOF
-else 
+else
     touch /tmp/google-credentials.json
 fi
 
