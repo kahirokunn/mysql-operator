@@ -19,11 +19,11 @@ The following table contains the configuration parameters for mysql-operator and
 | Parameter                       | Description                                                                                   | Default value                                           |
 | ---                             | ---                                                                                           | ---                                                     |
 | `replicas`                      | Replicas for controller                                                                       | `1`                                                     |
-| `image`                         | Controller container image                                                                    | `docker.io/bitpoke/mysql-operator:latest`               |
+| `image`                         | Controller container image                                                                    | `docker.io/bitpoke/mysql-operator:v0.5.1`               |
 | `imagePullPolicy`               | Controller image pull policy                                                                  | `IfNotPresent`                                          |
 | `imagePullSecrets`              | Controller image pull secret                                                                  |                                                         |
 | `sidecarImage`                  | Mysql operator sidecar image                                                                  | `docker.io/kahiro/mysql-operator:0.5.2.test`   |
-| `sidecarMysql8Image`            | Mysql operator sidecar image                                                                  | `docker.io/bitpoke/mysql-operator-sidecar-8.0:latest`   |
+| `sidecarMysql8Image`            | Mysql operator sidecar image                                                                  | `docker.io/bitpoke/mysql-operator-sidecar-8.0:v0.5.1`   |
 | `installCRDs`                   | Whether or not to install CRDS, Regardless of value of this, Helm v3+ will install the CRDs if those are not present already. Use `--skip-crds` with `helm install` if you want to skip CRD creation                                                                | `true`                                    |
 | `resources`                     | Controller and Orchestrator pod resources limits and requests                                 | `{}`                                                    |
 | `nodeSelector`                  | Controller and Orchestrator pod nodeSelector                                                  | `{}`                                                    |
@@ -36,7 +36,7 @@ The following table contains the configuration parameters for mysql-operator and
 | `rbac.serviceAccountName`       | If `rbac.create` is false then this service account is used                                   | a newly created one or `default`                        |
 | `podDisruptionBudget.enabled`   | Set PDB for Controller and Orchestrator nodes                                                 | `true`                                                  |
 | `podSecurityPolicy.enabled`     | Enfoce pod security policy                                                                    | `false`                                                 |
-| `orchestrator.image`            | Orchestrator container image                                                                  | `docker.io/bitpoke/mysql-operator-orchestrator:latest`  |
+| `orchestrator.image`            | Orchestrator container image                                                                  | `docker.io/bitpoke/mysql-operator-orchestrator:v0.5.1`  |
 | `orchestrator.topologyUser`     | Set a user for orchestrator to use it to connect to the MySQL cluster                         | `orchestrator`                                          |
 | `orchestrator.topologyPassword` | Set a password for the orchestrator user to connect to MySQL cluster                          | `<random string>`                                       |
 | `orchestrator.persistence.fsGroupWorkaroundEnabled` | Adds a  workaround for persistent volume provisioners which don't support fsGroup (eg. when deploying to kind) [#615](https://github.com/bitpoke/mysql-operator/issues/615) | `false` |

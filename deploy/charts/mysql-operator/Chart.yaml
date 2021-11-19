@@ -19,11 +19,11 @@ annotations:
   artifacthub.io/operatorCapabilities: "full lifecycle"
   artifacthub.io/images: |
     - name: mysql-operator
-      image: docker.io/bitpoke/mysql-operator:latest
+      image: docker.io/bitpoke/mysql-operator:v0.5.1
     - name: orchestrator
-      image: docker.io/bitpoke/mysql-operator-orchestrator:latest
+      image: docker.io/bitpoke/mysql-operator-orchestrator:v0.5.1
     - name: mysql-5.7-sidecar
       image: docker.io/kahiro/mysql-operator:0.5.2.test
     - name: mysql-8.0-sidecar
-      image: docker.io/bitpoke/mysql-operator-sidecar-8.0:latest
+      image: docker.io/bitpoke/mysql-operator-sidecar-8.0:v0.5.1
 
